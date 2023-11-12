@@ -1,5 +1,6 @@
 body {
-    background-image: url(background4.jpg);
+    background-image: url(avenue-2215317_1920.jpg);
+    background-size: cover;
     margin: 0; /* Reset default margin */
   }
   
@@ -37,6 +38,7 @@ body {
   /* HEADER */
   .header {
     background-color: #dfe0dc;
+    opacity: 0.85;
     border-radius: 30px;
     box-shadow: 0px 0px 10px 2px #424242;
     width: 70%;
@@ -118,6 +120,13 @@ body {
     width: 100%;
     margin-top: 10px;
     height: 40%;
+  }
+
+  .required-field::after {
+    content: "*";
+    color: red;
+    margin-left: 2px;
+
   }
   
 
