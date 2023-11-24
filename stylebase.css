@@ -128,7 +128,77 @@ body {
     margin-left: 2px;
 
   }
-  
+
+/* quizz css */
+
+.questions {
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.questionsDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.questionsDiv label {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.questionsDiv input {
+  margin: 10px;
+}
+
+.questionsDiv img {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
+
+#submit {
+  width: 200px;
+  height: 30px;
+  border-radius: 20px;
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+
+.resultDiv {
+  text-align: center;
+}
+
+#tryAgain {
+  display: none;
+  width: 200px;
+  height: 30px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+#startButton {
+  margin-top: 30px;
+  width: 80px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+#startButton:hover {
+  background-color: green;
+}
+
+#tryAgain:hover {
+  background-color: green;
+}
+
+.center {
+  text-align: center;
+}
+
 
 /* inserting media query to make the website responsive.  */
 @media screen and (max-width: 992px){  
@@ -139,4 +209,14 @@ body {
         padding: 10px;
     }
 
+    .questions{
+      grid-template-columns: 50% 50%;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+  .questions{
+    grid-template-columns: 100%;
+  }
 }

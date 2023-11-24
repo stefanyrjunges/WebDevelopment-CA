@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Lora:wght@400;500&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
 
+  
     <link rel="stylesheet" href="stylebase.css">
 
 </head>
@@ -25,7 +26,7 @@
 
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="buttonNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
@@ -57,17 +58,91 @@
   </nav>
 
     <div class="header">
-
-      <h1 class="aboutus">Title</h1>
+      <h1 class="aboutus">Quiz</h1>
 
       <hr>
 
-      <p class="about">TEXT TEXT TEXT TEXT TEXT
-        <b>Bold color</b>
-      </p>
+      <section class="gameStart">
+        <h2>Get ready for an exciting <b>sustainable</b> quiz !!!</h2>
+        <h2>Achieve a perfect score of 100% and we will plant a tree in the heart of the Amazon rainforest.</h2>
+        <h3>BEST OF LUCK !!</h3>
+        <button id="startButton" onclick="startGame()">start</button>
+      </section>
 
-    
+        <div class="questions">
+          <div class="center questionsDiv">
+            <label for="question1">what is the name of is object?</label>
+            <img src="/tree.jpeg" alt="">
+            <input type="text" name="question1" id="question1">
+          </div>
+  
+          <div class="center questionsDiv">
+            <label for="question 2">what is the name of this flower?</label>
+            <img src="/flower.jpg" alt="">
+            <input type="text" name="question 2" id="question2">
+          </div>
+          
+          <div class="center questionsDiv">
+            <label for="question3">what is the name of this forest?</label>
+            <img src="/amazon.jpg" alt="">
+            <input type="text" name="question3" id="question3">
+          </div>
+  
+          <div class="center questionsDiv">
+            <label for="question 4" id="question4label">what is the name of this river?</label>
+            <img src="/liffey river.jpg" alt="">
+            <input type="text" name="question 4" id="question4">
+          </div>
+  
+          <div class="center questionsDiv">
+            <label for="question5">what is the name of this continent?</label>
+            <img src="/africa.jpg" alt="">
+            <input type="text" name="question5" id="question5">
+          </div>
+  
+          <div class="center questionsDiv">
+            <label for="question6">what is the name of this continent?</label>
+            <img src="/america.jpg" alt="">
+            <input type="text" name="question6" id="question6">
+          </div>
+  
+          <div class="center questionsDiv">
+            <label for="question7">what is the name of this animal?</label>
+            <img src="/sheep.jpg" alt="">
+            <input type="text" name="question7" id="question7">
+          </div>
+  
+          <div class="center questionsDiv">
+            <label for="question8">what is this called?</label>
+            <img src="/honey.jpg" alt="">
+            <input type="text" name="question8" id="question8">
+          </div>
+  
+          <div class="center questionsDiv">
+            <label for="question9">what is the name of this season?</label>
+            <img src="/autumn.jpg" alt="">
+            <input type="text" name="question9" id="question9">
+          </div>
+  
+          <div class="center questionsDiv">
+            <label for="question10">what is the name of this fruit?</label>
+            <img src="/apples.jpg" alt="">
+            <input type="text" name="question10" id="question10">
+          </div>
+          
+  
+          <button id="submit" onclick="clickSubmit()">Check score</button>
+        </div>
+  
+        <div class="resultDiv">
+          <h2 id="result"></h2>
+        </div>
+        
+        <button onclick="startGame()" id="tryAgain">try again</button>
+     
     </div>
 
+    <script defer src="gamescript.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
