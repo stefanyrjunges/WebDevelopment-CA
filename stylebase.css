@@ -1,5 +1,5 @@
 body {
-    background-image: url(avenue-2215317_1920.jpg);
+    background-image: url(/images/avenue-2215317_1920.jpg);
     background-size: cover;
     margin: 0; /* Reset default margin */
   }
@@ -198,6 +198,7 @@ body {
 .center {
   text-align: center;
 }
+
 
 
 /* inserting media query to make the website responsive.  */

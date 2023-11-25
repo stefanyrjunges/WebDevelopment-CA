@@ -12,7 +12,7 @@ function clickSubmit(){
     var quiz = document.getElementsByClassName("questions")[0];
     var result = document.getElementById("result")
     var tryAgainButton = document.getElementById("tryAgain");
-
+    
     var score = 0
     
     var answers = ["tree","rose","amazon","liffey","africa","america","sheep","honey","autumn","apple"]
