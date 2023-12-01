@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sustainability</title>
+    <title>Join us</title>
+    <link rel="icon" type="image/x-icon" href="images/icon.png">
+    <!--image source:https://www.flaticon.com/free-icon/sustainability_3438386 -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
@@ -24,6 +26,7 @@
 
 <body>
 
+  <!-- NAVBAR (BOOTSTRAP) -->
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="buttonNav">
@@ -37,16 +40,13 @@
           <li class="nav-item">
             <a class="nav-link" href="donate.html">Donate</a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact us</a>
+            <a class="nav-link" href="gallery.html">Our projects</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Gallery</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="joinUs.html">Join us</a>
+            <a class="nav-link" href="confirmation_form.html">Join us</a>
           </li>
 
           <li class="nav-item">
@@ -58,6 +58,7 @@
   </nav>
 
   <div class="header">
+    <div id="cont">
     <h1 class="aboutus">Join us and help the cause</h1>
     <hr>
     <p class="about">Join us for a non-paid volunteering programme and help the <b>Nature</b></p>
@@ -67,15 +68,15 @@
         <div class="col-5">
           <label for="name" class="spacing_form required-field">Name</label>
           <div class="d-flex ">
-            <input type="name" id="name" class="spacing_form" placeholder="first" required>
-            <input type="name" class="spacing_form" name="surname" placeholder="last" required>
+            <input id="name" type="name" class="spacing_form" placeholder="First" required>
+            <input id="surname" type="name" class="spacing_form" name="surname" placeholder="Last" required>
           </div>
-         
+
           <label for="age" class="spacing_form required-field">Date of Birth <br><small>(Must be 18 or older)</small></label>
-          <input type="date" class="spacing_form" name="" required>
+          <input id="age" type="date" class="spacing_form" name="age" required>
 
           <label for="country" class="spacing_form required-field" >Country</label>
-          <select name="" id="" class="spacing_form" required>
+          <select id="country" name="country" class="spacing_form"  required >
             <option value="Afghanistan">Afghanistan</option>
                       <option value="Albania">Albania</option>
                       <option value="Algeria">Algeria</option>
@@ -180,7 +181,7 @@
                       <option value="Indonesia">Indonesia</option>
                       <option value="Iran">Iran (Islamic Republic of)</option>
                       <option value="Iraq">Iraq</option>
-                      <option value="Ireland">Ireland</option>
+                      <option value="Ireland" selected>Ireland</option>
                       <option value="Israel">Israel</option>
                       <option value="Italy">Italy</option>
                       <option value="Jamaica">Jamaica</option>
@@ -195,7 +196,7 @@
                       <option value="Kyrgyzstan">Kyrgyzstan</option>
                       <option value="Lao">Lao People's Democratic Republic</option>
                       <option value="Latvia">Latvia</option>
-                      <option value="Lebanon" selected>Lebanon</option>
+                      <option value="Lebanon">Lebanon</option>
                       <option value="Lesotho">Lesotho</option>
                       <option value="Liberia">Liberia</option>
                       <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
@@ -310,16 +311,15 @@
           </select>
           
           <label for="" class="spacing_form required-field" >City</label>
-          <input type="city" class="spacing_form" name="" id="" required>
+          <input id="city" type="city" class="spacing_form" name="city" required>
 
           <label for="tel" class="required-field">Phone number</label>
-          <input type="tel" class="spacing_form" name="" id="">
+          <input id="tel" type="tel" class="spacing_form" name="tel" required>
 
-          <input type="submit" name="" id="submit" class="spacing_form">
         </div>
         <div class="col-5 d-flex flex-column">
           <label for="gender" class="spacing_form required-field">Gender</label>
-          <select name="gender" class="spacing_form" id="">
+          <select id="gender" name="gender" class="spacing_form" required>
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="other">Other</option>
@@ -328,21 +328,27 @@
           <label for="" class="mt-2 spacing_form required-field">Do you have any experience at volunteering?</label>
           <div class="m-3">
             <label for="radio">Yes</label>
-            <input type="radio" required name="experience" id=""> 
+            <input id="experience" type="radio" name="experience" value="yes" required>
             <label for="radio">No</label>
-            <input type="radio" required name="experience" id="">
+            <input type="radio" name="experience" value="no" required>
           </div>
 
           <label for="email" class="spacing_form required-field">Email</label>
-          <input type="email" class="spacing_form mb-2" name="" id="" required placeholder=" example@email.com">
+          <input id="email" type="email" class="spacing_form mb-2" name="email" placeholder=" example@email.com" required>
 
           <label for="textarea" class="required-field">Tell us more about you </label>
-          <textarea name="" id="textarea" required cols="60" rows="10"></textarea>
+          <textarea name="" id="textarea" cols="60" rows="10" required></textarea>
+
+          <button type="submit" name="submit" id="submit" class="spacing_form" onclick="verifyData()">Submit!</button>  
+          
+          <h1 id="hiddentxt" style="display:none"></h1>
         </div>
       </div>
     </form>
   </div>
+</div>
+ 
 
-  <script src="/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
