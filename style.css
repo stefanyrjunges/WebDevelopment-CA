@@ -14,7 +14,10 @@ font-family: 'PT Serif', serif; */
         background-attachment: fixed;
         background-size: cover;
     }
+
+/* REFERENCE Tama66. Avenue, Trees, Tree lined image. 11 Apr. 2017. https://pixabay.com/photos/avenue-trees-tree-lined-path-trail-2215317/. Accessed 29 Oct. 2023. */
     
+
     /* NAVBAR */
     
     .container-fluid {background-color: #dfe0dc;
@@ -196,15 +199,11 @@ b{
 
     /* BUTTON */
 
-    .mbutton {
-    font-family: 'Lora';
+    #mbutton, #mbutton2, #mbutton3 {font-family: 'Lora';
     color:green;
     margin-top:5px;
     background-color: transparent;
-    border: 0px;
-}
-
-
+    border: 0px;} /* created different buttons to display different content */
  
   /* join us css */
   .form {
@@ -377,9 +376,12 @@ h1.gallery {font-family: 'Lora';
   }
 
 
-
-
 /* inserting media query to make the website responsive.  */
+ @media (max-width: 1400px) {
+  .responsivetable {overflow-x: auto;}
+  .statistics {margin-left:30px;}
+    } /* only for the DONATE page */
+
 @media screen and (max-width: 992px){  
 
     .navbar-collapse{
